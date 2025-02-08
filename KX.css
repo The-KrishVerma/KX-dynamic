@@ -1,0 +1,124 @@
+body{
+    background-color: black;
+    color: white;
+    margin-top: 0px;
+    margin-left: 0px;
+}
+.Container{
+    display:flex;  
+}
+.LeftSection{
+    
+    border-right: 1px solid;
+    border-color: rgba(255, 255, 255, 0.521);
+    width: 250px;
+    height: 100vh;
+    margin-left: 0px;
+}
+.MiddleSection{
+    background-color: black;
+    width: 50%;
+    padding-left: 70px;
+    padding-right: 20px;
+    height: 100vh;
+    overflow: scroll;
+
+}
+.RightSection{
+    background-color:black;
+    height: 100vh;
+    width: 390px;
+    overflow: scroll;
+}
+li{
+    color: rgba(255, 255, 255, 0.46);
+    padding-left: 30px;       
+    transition: color 0.1s;
+    transition: background-color 0.1s;
+    margin-top: 5px;
+    margin-left: 0px;
+    margin-right: 10px;
+    border-radius: 15px;
+    height: 45px;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    text-align: left;
+    width: 120px;
+}
+li:hover{
+    background-color: rgba(255, 255, 255, 0.307);
+    color: white;
+}
+.plus{
+    margin-top: 60px;
+    margin-left: 25px;
+    margin-right: 25px;
+    border-radius: 20px;
+    background-color: white;
+    height: 40px;
+    width: 200px;
+    color: black;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Profile{
+    margin-top: 15px;
+    border-radius: 50px;
+    transition: background-color 0.3s;
+    padding-left: 5px;
+    line-height: 0.5;
+    height: 60px;
+    width: 200px;
+    padding-top: 1px;
+    margin-left: 25px;
+    margin-right: 25px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.Profile:hover{
+    background-color: rgba(255, 255, 255, 0.304);
+    
+}
+.Top{
+    margin-right: 30px;
+    font-size: 20px;
+    transition: color 0.3s;
+    color: rgba(255, 255, 255, 0.521);
+}
+.Twit1{
+    margin-top: 10px;
+    padding-top: 1px;
+    height: 450px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.521);
+}
+.AllTwits{
+    height: 100vh;
+    display: block;
+}
+.Top:hover{
+    color: white;
+}
+@media (max-width: 1000px) {
+    .RightSection {
+        display: none !important;
+    }
+}
+
+iframe {   
+    height: 300px;
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: 1px solid;
+    margin-top: 20px;
+    border-radius: 10px;  
+
+}
