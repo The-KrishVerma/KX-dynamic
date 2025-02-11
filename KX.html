@@ -61,16 +61,20 @@
                 style="border-bottom: 1px solid rgba(255, 255, 255, 0.521); margin-top: 20px; width: 100%; display: flex; padding-bottom: 10px; justify-content: start;">
                 <span class="Top">For You</span><span class="Top">Following<span>
             </div>
-            <label>
-                <input type="text"
-                    style="margin-top: 20px; color: rgba(255, 255, 255, 0.406); font-size: 25px; background-color: black; border: none; width: 100%; height: 50px;"
-                    placeholder="Share your thoughts...">
-            </label>
-            <button
-                style="border-radius: 20px; height: 40px; width: 70px; background-color: rgba(255, 255, 255, 0.429);border: none; float: right; margin-top: 10px;">Post</button>
-
-            <div style="clear: both;"></div>
-
+            <div>
+                <form action="backend.php">
+                    <input type="text"
+                        style="margin-top: 20px; color: rgba(255, 255, 255, 0.406); font-size: 25px; background-color: black; border: none; width: 100%; height: 50px;"
+                        placeholder="Share your thoughts...">
+                </form>
+            </div>
+            <div style="display: flex; justify-content: end;">
+                <form action="backend.php">
+                    <input type="submit"
+                        style="border-radius: 20px; height: 40px; width: 85px; background-color: rgba(255, 255, 255, 0.429);border: none; margin-top: 10px; font-size: 20px;"
+                        value="Post">
+                </form>
+            </div>
             <div
                 style="border-top: 1px solid; border-bottom: 1px solid; height: 50px; margin-top: 10px; border-top-color: rgba(255, 255, 255, 0.591);; border-bottom-color: rgba(255, 255, 255, 0.591); text-align: center; align-items: center; display: flex; justify-content: center; font-size: 25px;">
                 <a href="#" style="text-decoration: none; color: rgb(74, 149, 199);">Show 315 posts</a>
@@ -89,7 +93,8 @@
                             <p style="color: rgba(255, 255, 255, 0.521); font-size: 17px;">@The_KrishVerma · 19h</p>
                         </div>
                         <div style="margin-top: 5px; line-height: 20px;">
-                            Democrats FREAK OUT & Attempt To Shut Down DOGE Audits At The US Treasury Department, Call
+                            Democrats FREAK OUT & Attempt To Shut Down DOGE Audits At The US Treasury Department,
+                            Call
                             For
                             Fighting In The Streets
 
@@ -98,7 +103,8 @@
                             Of Their Tax Dollars
                         </div>
                         <div style="align-items: center; justify-content: center; display: flex;">
-                            <iframe src="https://www.youtube.com/embed/qSXeUISCCgE?start=20&autoplay=1&muted=1"></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/qSXeUISCCgE?start=20&autoplay=1&muted=1"></iframe>
                         </div>
                     </div>
                 </div>
@@ -119,7 +125,8 @@
                             उड़ाई हैं, देशवासियों ने इसे देखा है।
                         </div>
                         <div style="align-items: center; justify-content: center; display: flex;">
-                            <iframe src="https://www.youtube.com/embed/1xAqNhMX4E0?start=30&autoplay=1&muted=1"></iframe>
+                            <iframe
+                                src="https://www.youtube.com/embed/1xAqNhMX4E0?start=30&autoplay=1&muted=1"></iframe>
                         </div>
                     </div>
                 </div>
@@ -127,11 +134,11 @@
 
         </div>
         <div class="RightSection">
-            <label for="search">
-                <input type="text"
-                    style="border-radius: 40px; height: 40px; background-color: black; padding-left: 20px; color: rgba(255, 255, 255, 0.403); width: 300px; font-size: 20px; margin-top: 10px;"
-                    id="search" placeholder="Search">
-            </label>
+
+            <input type="text"
+                style="border-radius: 40px; height: 40px; background-color: black; padding-left: 20px; color: rgba(255, 255, 255, 0.403); width: 300px; font-size: 20px; margin-top: 10px;"
+                id="search" placeholder="Search">
+
             <h2>Subscribe To Premium</h2>
             <p>Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
             <button
@@ -176,7 +183,7 @@
                         <p>@Virat_Kohli</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px;">Follow</button>
+                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
                     </div>
                 </div>
                 <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
@@ -188,7 +195,7 @@
                         <p>@Alvaro_Morte</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px;">Follow</button>
+                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
                     </div>
                 </div>
                 <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
@@ -200,7 +207,7 @@
                         <p>@The_KrishVerma</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px;">Follow</button>
+                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
                     </div>
                 </div>
             </div>
@@ -209,12 +216,16 @@
                 <a href="#" style="text-decoration: none; font-size: 20px; color: rgb(74, 149, 199);">Show more</a>
             </div>
             <div style="border-top: 1px solid rgba(255, 255, 255, 0.491);">
-                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Terms of Service</a>
+                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Terms of
+                        Service</a>
                 </p>
-                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Privacy Policy</a></p>
-                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Cookie Policy</a></p>
+                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Privacy Policy</a>
+                </p>
+                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Cookie Policy</a>
+                </p>
                 <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Accessiblity</p>
-                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">2025 KX corp</a></p>
+                <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">2025 KX corp</a>
+                </p>
             </div>
         </div>
     </div>
