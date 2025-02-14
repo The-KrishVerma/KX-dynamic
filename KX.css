@@ -113,15 +113,13 @@ li:hover{
     }
 }
 
-iframe {   
-    height: 300px;
-    width: 100%;
+video{   
+    
     margin-left: 0px;
     margin-right: 0px;
     border: 1px solid;
     margin-top: 20px;
     border-radius: 10px;  
-
 }
 .plus+:visited{
     color: black;
