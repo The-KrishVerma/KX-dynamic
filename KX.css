@@ -32,7 +32,7 @@ body{
 }
 li{
     color: rgba(255, 255, 255, 0.46);
-    padding-left: 30px;       
+    padding-left: 10px;       
     transition: color 0.1s;
     transition: background-color 0.1s;
     margin-top: 5px;
@@ -44,8 +44,8 @@ li{
     align-items: center;
     display: flex;
     text-align: left;
-    width: 120px;
-}
+    width: 150px;
+}    
 li:hover{
     background-color: rgba(255, 255, 255, 0.307);
     color: white;
