@@ -239,6 +239,7 @@ function unfollow(whichclicked) {
 }
 
 function loginsucc() {
+    
     let phone = document.getElementById("ph_login").value;
     let pass = document.getElementById("pass_login").value;
 
@@ -246,7 +247,7 @@ function loginsucc() {
     if (phone === "1234567890" && pass === "hello") {
         document.getElementById("login").style.display = "none";
         document.getElementById("Container").style.display = "flex";
-        alert("Login Successful");
+        // alert("Login Successful");
     }
     else if (phone === "") {
         alert("Enter phone number");
