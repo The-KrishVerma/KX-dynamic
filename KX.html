@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -11,10 +10,59 @@
 </head>
 
 <body>
-    <div class="Container">
-        <div class="LeftSection">
-            <P style="font-size: 80px; margin-top: 0px; margin-left: 20px;">KX</P>
-            <ul style="list-style-type: none;">
+
+    <div id="login" style="display: flex; height: 100vh; width: 100%; font-family: 'Segoe UI', sans-serif; background-color: #000; color: #fff;">
+
+        <div style="width: 50%; display: flex; justify-content: center; align-items: center; padding: 2rem; color: white; font-size: 350px; font-weight: bolder; font-family:'Times New Roman', Times, serif;">
+            KX
+        </div>
+
+        <div style="width: 50%; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 2rem;">
+            <div style="width: 100%; max-width: 400px;">
+    
+                <h1 style="font-size: 36px; font-weight: bold; margin-bottom: 20px;">Sign in to KX</h1>
+    
+                <form style="width: 100%;">
+                    <div style="margin-bottom: 1.2rem;">
+                        <input type="text" placeholder="Phone, email, or username" style="width: 100%; padding: 14px; border: 1px solid #333; background-color: #000; color: #fff; border-radius: 6px; font-size: 16px; box-sizing: border-box;" id="ph_login">
+                    </div>
+    
+                    <div style="margin-bottom: 1.5rem;">
+                        <input type="password" placeholder="Password" style="width: 100%; padding: 14px; border: 1px solid #333; background-color: #000; color: #fff; border-radius: 6px; font-size: 16px; box-sizing: border-box;" id="pass_login">
+                    </div>
+    
+                    <button type="submit" style="width: 100%; padding: 14px; background-color: white; color: black; border: none; border-radius: 999px; font-size: 16px; font-weight: bold; cursor: pointer; margin-bottom: 1.5rem;" onclick="loginsucc()">
+                        Sign In
+                    </button>
+                </form>
+    
+                <div style="display: flex; align-items: center; margin: 20px 0;">
+                    <div style="flex: 1; height: 1px; background-color: #333;"></div>
+                    <span style="padding: 0 15px; color: #555;">or</span>
+                    <div style="flex: 1; height: 1px; background-color: #333;"></div>
+                </div>
+    
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <button style="width: 100%; padding: 12px; background-color: #fff; color: #000; border-radius: 999px; font-weight: bold; cursor: pointer; border: none;">Continue with Google</button>
+                    <button style="width: 100%; padding: 12px; background-color: #fff; color: #000; border-radius: 999px; font-weight: bold; cursor: pointer; border: none;">Continue with Apple</button>
+                </div>
+    
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#" style="color: #1da1f2; text-decoration: none;">Forgot password?</a>
+                </div>
+    
+                <div style="text-align: center; margin-top: 1.5rem; color: #666;">
+                    Don’t have an account? <a href="#" style="color: #1da1f2; text-decoration: none;">Sign up</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="Container" style="display: none;">
+        <div id="LeftSection">
+            <div style="font-size: 80px; margin-top: 0px; margin-left: 20px;">KX</div>
+
+            <ul style="list-style-type: none; margin-top: 70px;">
                 <a style="text-decoration: none;" href="#">
                     <li><i class="fa fa-home"></i>&nbsp;&nbsp;Home</li>
                 </a>
@@ -58,134 +106,386 @@
                 </div>
             </div>
         </div>
-        <div class="MiddleSection">
+        <div id="MiddleSection">
             <div
-                style="border-bottom: 1px solid rgba(255, 255, 255, 0.521); margin-top: 20px; width: 100%; display: flex; padding-bottom: 10px; justify-content: start;">
-                <span class="Top">For You</span><span class="Top">Following<span>
+                style="border-bottom: 1px solid rgba(255, 255, 255, 0.521); padding-top: 20px; width: 100%; display: flex; padding: 0px; justify-content: start; height: 50px;">
+                <button class="Top"
+                    style="background-color: black; border: none; border-bottom: 5px solid blue; width: 50%; height: 100%;"
+                    type="button" onclick="foryou()" id="foryoubutton">For You</button><button class="Top"
+                    style="background-color: black; border: none; width: 50%; height: 100%;" type="button"
+                    onclick="following()" id="followingbutton">Following</button>
             </div>
-            <div>
-                <form action="">
-                    <input type="text"
-                        style="margin-top: 20px; color: rgba(255, 255, 255, 0.406); font-size: 25px; background-color: black; border: none; width: 100%; height: 50px;"
-                        placeholder="Share your thoughts...">
-                </form>
-            </div>
-            <div style="display: flex; justify-content: end;">
-                <form action="">
-                    <input type="submit"
-                        style="border-radius: 20px; height: 40px; width: 85px; background-color: rgba(255, 255, 255, 0.429);border: none; margin-top: 10px; font-size: 20px;"
-                        value="Post">
-                </form>
-            </div>
-            <div
-                style="border-top: 1px solid; border-bottom: 1px solid; height: auto; margin-top: 10px; border-top-color: rgba(255, 255, 255, 0.591); border-bottom-color: rgba(255, 255, 255, 0.591); display: flex; justify-content: center; font-size: 25px; padding-top: 10px; padding-bottom: 10px; align-items: center; ">
-                <a href="#" style="text-decoration: none; color: rgb(74, 149, 199);">Show 315 posts</a>
-            </div>
-            <div class="AllTwits">
-                <div class="Twit1">
-                    <div style="height: auto;">
-                        <img src="./images/Profile photo.jpeg"
-                            style="height: 50px; width: 50px; border-radius: 50px; display: inline;">
-                    </div>
-                    <div
-                        style="height: auto; margin-left: 10px; width: 100%; padding-top: 0px; padding-left: 5px; align-items: start; padding-bottom: 0px;">
-                        <div
-                            style="height: 30px; display: flex; line-height: 1px; align-items: center; justify-content: start;">
-                            <p style="font-size: 20px;">Krish Verma&nbsp;&nbsp;</p>
-                            <p style="color: rgba(255, 255, 255, 0.521); font-size: 17px;">@The_KrishVerma · 19h</p>
-                        </div>
-                        <div style="margin-top: 5px; line-height: 20px;">
-                            Democrats FREAK OUT & Attempt To Shut Down DOGE Audits At The US Treasury Department,
-                            Call
-                            For
-                            Fighting In The Streets
+            <div id="dis_foryou" style="display: block;">
+                <div>
+                    <form action="">
+                        <input type="text"
+                            style="margin-top: 20px; color: rgba(255, 255, 255, 0.406); font-size: 25px; background-color: black; border: none; width: 100%; height: 50px;"
+                            placeholder="Share your thoughts..." id="thoughts">
+                    </form>
+                </div>
+                <div style="display: flex; justify-content: end;">
 
-                            WH Press Secretary Karoline Leavitt Reminds Them That The American People Voted For
-                            Accountability
-                            Of Their Tax Dollars
+                    <button
+                        style="border-radius: 20px; height: 40px; width: 80px; background-color: rgba(255, 255, 255, 0.429);border: none; margin-top: 10px; font-size: 20px; font-weight: bolder;"
+                        onclick="disthoughts()">Post</button>
+
+                </div>
+                <div
+                    style="border-top: 1px solid; border-bottom: 1px solid; height: auto; margin-top: 10px; border-top-color: rgba(255, 255, 255, 0.591); border-bottom-color: rgba(255, 255, 255, 0.591); display: flex; justify-content: center; font-size: 25px; padding-top: 10px; padding-bottom: 10px; align-items: center; ">
+                    <a href="#" style="text-decoration: none; color: rgb(74, 149, 199);">Show 315 posts</a>
+                </div>
+                <div id="AllTwits">
+                    <div class="Twit1">
+                        <div style="height: auto;">
+                            <img src="./images/Profile photo.jpeg"
+                                style="height: 50px; width: 50px; border-radius: 50px; display: inline;">
                         </div>
-                        <div style="align-items: center; justify-content: center; display: flex;">
-                            <video width="100%" height="300px" autoplay muted controls>
-                                <source src="./images/5286283-hd_1920_1080_30fps.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                        <div
+                            style="height: auto; margin-left: 10px; width: 100%; padding-top: 0px; padding-left: 5px; align-items: start; padding-bottom: 0px;">
+                            <div
+                                style="height: 30px; display: flex; line-height: 1px; align-items: center; justify-content: start;">
+                                <p style="font-size: 20px;">Krish Verma&nbsp;&nbsp;</p>
+                                <p style="color: rgba(255, 255, 255, 0.521); font-size: 17px;">@The_KrishVerma · 19h</p>
+                            </div>
+                            <div style="margin-top: 5px; line-height: 20px;">
+                                Democrats FREAK OUT & Attempt To Shut Down DOGE Audits At The US Treasury Department,
+                                Call
+                                For
+                                Fighting In The Streets
+
+                                WH Press Secretary Karoline Leavitt Reminds Them That The American People Voted For
+                                Accountability
+                                Of Their Tax Dollars
+                            </div>
+                            <div style="align-items: center; justify-content: center; display: flex;">
+                                <video width="100%" height="300px" autoplay muted controls>
+                                    <source src="./images/5286283-hd_1920_1080_30fps.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                            <div style="display: flex; margin-top: 10px; justify-content: space-between; height: auto; padding-bottom: 10px;"
+                                class="likesection">
+                                <button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="comment"><i class="fa fa-comment-o"> 26k</i></button><button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px; align-items: center; border: none;"
+                                    class="likes" onclick="like(this)"><i class="fa fa-heart-o">
+                                        407k</i></button><button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="share"><i class="fa fa-share-alt"> 100k</i></button><button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="navi"><i class="fa fa-navicon"></i></button>
+                            </div>
                         </div>
-                        <div style="display: flex; margin-top: 15px; justify-content: space-between; font-size: 20px; color: rgba(255, 255, 255, 0.521); align-items: center;height: auto; padding-bottom: 15px;">
-                            <i class="fa fa-comment-o"> 26k</i><i class="fa fa-heart-o"> 407k</i><i class="fa fa-share-alt"> 100k</i><i class="fa fa-navicon"></i>
+                    </div>
+                    <div class="Twit1">
+                        <div style="height: auto;">
+                            <img src="./images/narendrammodi.jpeg"
+                                style="height: 50px; width: 50px; border-radius: 50px; display: inline;">
+                        </div>
+                        <div
+                            style="height: auto; margin-left: 10px; width: 100%; padding-top: 0px; padding-left: 5px; align-items: start;">
+                            <div
+                                style="height: 30px; display: flex; line-height: 1px; align-items: center; justify-content: start;">
+                                <p style="font-size: 20px;">Narendra Modi&nbsp;&nbsp;</p>
+                                <p style="color: rgba(255, 255, 255, 0.521); font-size: 17px;">@narendramodi · 2h</p>
+                            </div>
+                            <div style="margin-top: 5px; line-height: 20px;">
+                                संविधान को जेब में रखकर जनता-जनार्दन को गुमराह करने वालों ने कैसे बार-बार इसकी धज्जियां
+                                उड़ाई हैं, देशवासियों ने इसे देखा है।
+                            </div>
+                            <div style="align-items: center; justify-content: center; display: flex;">
+                                <video width="100%" height="300px" autoplay muted controls>
+                                    <source src="./images/gettyimages-1500700838-640_adpp.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+
+                            <div style="display: flex; margin-top: 10px; justify-content: space-between; height: auto; padding-bottom: 10px;"
+                                class="likesection">
+                                <button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="comment"><i class="fa fa-comment-o"> 20k</i></button><button
+                                    style="color: rgba(255, 255, 255); background-color: black; font-size: 20px; align-items: center; border: none;"
+                                    class="likes" onclick="like(this)"><i class="fa fa-heart-o">
+                                        396k</i></button><button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="share"><i class="fa fa-share-alt"> 80k</i></button><button
+                                    style="color: rgb(255, 255, 255); background-color: black; font-size: 20px;align-items: center; border: none;"
+                                    class="navi"><i class="fa fa-navicon"></i></button>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="Twit1">
-                    <div style="height: auto;">
-                        <img src="./images/narendrammodi.jpeg"
-                            style="height: 50px; width: 50px; border-radius: 50px; display: inline;">
-                    </div>
+
+            </div>
+
+            <div id="dis_following" style="display: none; justify-content: center; align-items: center; height: 100vh;">
+                <div style="background-color: white; height: auto; width: 50vh; border-radius: 8px;">
                     <div
-                        style="height: auto; margin-left: 10px; width: 100%; padding-top: 0px; padding-left: 5px; align-items: start;">
-                        <div
-                            style="height: 30px; display: flex; line-height: 1px; align-items: center; justify-content: start;">
-                            <p style="font-size: 20px;">Narendra Modi&nbsp;&nbsp;</p>
-                            <p style="color: rgba(255, 255, 255, 0.521); font-size: 17px;">@narendramodi · 2h</p>
+                        style="color: black;display: flex; justify-content: center; font-size: 3vh; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; border-bottom: 1px solid black; padding: 10px; height: 3vh; align-items: center;">
+                        Following</div>
+                    <div
+                        style="display: flex; width: 100%; justify-content: center; height: 4vh; align-items: center; padding: 10px 0px 10px 0px;">
+                        <input type="text" placeholder="Search"
+                            style="width: 85%; height: 90%; border-radius: 6px; font-size: 18px;"
+                            onkeyup="searchFollowing()" id="followingSearch">
+                    </div>
+                    <div style="display: block; overflow: scroll; height: 50vh; padding-bottom: 10px;"
+                        id="followingList">
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/billgates.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Bill Gates</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Bill_Gates</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
                         </div>
-                        <div style="margin-top: 5px; line-height: 20px;">
-                            संविधान को जेब में रखकर जनता-जनार्दन को गुमराह करने वालों ने कैसे बार-बार इसकी धज्जियां
-                            उड़ाई हैं, देशवासियों ने इसे देखा है।
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/elonmusk.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Elon Musk</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Elon_Musk</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
                         </div>
-                        <div style="align-items: center; justify-content: center; display: flex;">
-                            <video width="100%" height="300px" autoplay muted controls>
-                                <source src="./images/gettyimages-1500700838-640_adpp.mp4" type="video/mp4">
-                                Your browser does not support the video tag.
-                            </video>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/emmawatson.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Emma_Watson</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Emma_Watson</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
                         </div>
-                        <div style="display: flex; margin-top: 15px; justify-content: space-between; font-size: 20px; color: rgba(255, 255, 255, 0.521);align-items: center; height: auto; padding-bottom: 15px;">
-                            <i class="fa fa-comment-o"> 20k</i><i class="fa fa-heart-o"> 396k</i><i class="fa fa-share-alt"> 80k</i><i class="fa fa-navicon"></i>
+
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/moneyheist.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Alvaro Morte</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Alvaro_Morte</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
                         </div>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/narendrammodi.jpeg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Narendra Modi</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Narendra_Modi</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/kriti.jpg" style="height: 55px; width: 55px; border-radius: 50%;">
+                                </div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Kriti Karbanda</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Kriti_Karbanada</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/shrutihassan.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Shruti Hassan</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Shruti_Hasssan</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/vk.jpg" style="height: 55px; width: 55px; border-radius: 50%;">
+                                </div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Virat Kohli</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Virat_Kohli</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/rashik.jpg"
+                                        style="height: 55px; width: 55px; border-radius: 50%;"></div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Rashi Khanna</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Rashi_Khanna</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; padding-left: 15px; padding-right: 15px; justify-content: start; margin-top: 10px;"
+                            class="following-item">
+                            <div style="display: flex; width: 75%;">
+                                <div style="display: flex; justify-content: center; align-items: center;"><img
+                                        src="./images/as.jpg" style="height: 55px; width: 55px; border-radius: 50%;">
+                                </div>
+                                <div style="color: black; display: block; padding-left: 6px;">
+                                    <div
+                                        style="font-weight: bolder; height: 50%; display: flex; align-items: end; font-size: 18px;">
+                                        Aishwarya Rai</div>
+                                    <div style="height: 50%; display: flex; align-items: start;">@Aishwarya_Rai</div>
+                                </div>
+                            </div>
+                            <div style="width: 25%; display: flex; justify-content: end; align-items: center;"><button
+                                    style="height: 60%; width: 100px; font-weight: bolder; border: none; border-radius: 5px;"
+                                    onclick="unfollow(this)" class="followbutton">Following</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
 
         </div>
-        <div class="RightSection">
-            <form action="">
-                <input type="text"
-                    style="border-radius: 40px; height: 40px; background-color: black; padding-left: 20px; color: rgba(255, 255, 255, 0.403); width: 300px; font-size: 20px; margin-top: 10px;"
-                    id="search" placeholder="Search">
-            </form>
+        <div id="RightSection">
+            <div class="profile-search-container">
+                <form onsubmit="searchProfiles(event)">
+                    <input type="text" id="profile-search" placeholder="Search profiles..."
+                        class="profile-search-input">
+                </form>
+                <div id="profile-results" class="profile-results"></div>
+            </div>
             <h2>Subscribe To Premium</h2>
             <p>Subscribe to unlock new features and if eligible, receive a share of revenue.</p>
             <button
-                style="background-color: rgb(101, 185, 241); border-radius: 20px; height: 50px; width: 150px; font-size: 20px; display: block; margin-top: 20px;"><a
+                style="background-color: rgb(101, 185, 241); border-radius: 20px; height: 50px; width: 150px; font-size: 20px; display: block; margin-top: 20px; border: none;"><a
                     href="#" style="text-decoration: none; color: white;">Subscribe</a></button>
             <p style="font-size: 20px; font-weight: 700; margin-top: 40px;">
                 What's happening
             </p>
             <div style="display: flex; justify-content: start;align-items: center;">
-                <img src="./images/Whats happening.jpg" style="height: 100px; width: 150px; border-radius: 10px;">
+                <img src="./images/aishwar.jpg" style="height: 100px; width: 150px; border-radius: 10px;">
                 <p style="align-items: start; font-size: 30px; margin-left: 10px;">Khloe in Wonder Land</p>
             </div>
-            <div style="line-height: 1px; margin-top: 30px;">
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
-                <p style="font-size: 20px;">#I_Love_Youu</p>
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">180K</p>
+            <div id="trending" style="height: 236px; overflow: hidden;">
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#I_Love_Youu</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">180K</p>
+                </div>
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#ValentineDay</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">127K</p>
+                </div>
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#MahaKhumb_2025</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">18K</p>
+                </div>
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#IPL_2025</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">208K</p>
+                </div>
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#Trump</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">104K</p>
+                </div>
+                <div style="line-height: 1px; margin-top: 30px;">
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
+                    <p style="font-size: 20px;">#VK18</p>
+                    <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">509K</p>
+                </div>
+
             </div>
-            <div style="line-height: 1px; margin-top: 30px;">
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
-                <p style="font-size: 20px;">#ValentineDay</p>
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">127K</p>
+            <div style="border-bottom: 1px solid rgba(255,255,255,0.521); display: flex; justify-content: start; align-items: center; height: 60px;">
+                <button
+                    style="display: flex; justify-content: start; align-items: center; font-size: 20px; color: rgb(74, 149, 199); background-color: black; border: none;"
+                    onclick="exttrend()" id="trendbutton">
+                    Show more
+                </button>
             </div>
-            <div style="line-height: 1px; margin-top: 30px;">
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">Trending in India</p>
-                <p style="font-size: 20px;">#MahaKhumb_2025</p>
-                <p style="font-size: 15px; color: rgba(255, 255, 255, 0.407);">18K</p>
-            </div>
-            <div
-                style="display: flex; justify-content: start; align-items: center; margin-top: 30px;margin-bottom: 30px;">
-                <a href="#" style="text-decoration: none; font-size: 20px; color: rgb(74, 149, 199);">Show more</a>
-            </div>
-            <div style="font-size: 20px; font-weight: 900; margin-bottom: 20px;">
+
+            <div style="font-size: 20px; font-weight: 900; margin-bottom: 20px; margin-top: 30px;">
                 Who to follow
             </div>
-            <div>
+            <div style="height: 232px; overflow: hidden;" id="tofollow">
                 <div style="display: flex; justify-content: start; align-items: center;">
                     <div style="height: 50px; width: 50px; overflow: hidden;">
                         <img src="./images/vkas_0.webp" style="height: 50px; width: 50px; border-radius: 50px;">
@@ -195,7 +495,8 @@
                         <p>@Virat_Kohli</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
+                        <button
+                            style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px; background-color: rgb(44, 173, 220); border: none;">Follow</button>
                     </div>
                 </div>
                 <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
@@ -207,26 +508,57 @@
                         <p>@Alvaro_Morte</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
+                        <button
+                            style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px; background-color: rgb(44, 173, 220); border: none;">Follow</button>
+                    </div>
+                </div>
+
+                <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
+                    <div style="height: 50px; width: 50px;">
+                        <img src="./images/billgates.jpg" style="height: 50px; width: 50px; border-radius: 50px;">
+                    </div>
+                    <div style="line-height: 1px; padding: 10px;">
+                        <p>Bill Gates</p>
+                        <p>@Bill_Gates</p>
+                    </div>
+                    <div>
+                        <button
+                            style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px; background-color: rgb(44, 173, 220); border: none;">Follow</button>
                     </div>
                 </div>
                 <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
                     <div style="height: 50px; width: 50px;">
-                        <img src="./images/Profile photo.jpeg" style="height: 50px; width: 50px; border-radius: 50px;">
+                        <img src="./images/elonmusk.jpg" style="height: 50px; width: 50px; border-radius: 50px;">
                     </div>
                     <div style="line-height: 1px; padding: 10px;">
-                        <p>Krish Verma</p>
-                        <p>@The_KrishVerma</p>
+                        <p>Elon Musk</p>
+                        <p>@Elon_Musk</p>
                     </div>
                     <div>
-                        <button style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px;">Follow</button>
+                        <button
+                            style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px; background-color: rgb(44, 173, 220); border: none;">Follow</button>
+                    </div>
+                </div>
+                <div style="display: flex; justify-content: start; align-items: center; margin-top: 10px;">
+                    <div style="height: 50px; width: 50px;">
+                        <img src="./images/emmawatson.jpg" style="height: 50px; width: 50px; border-radius: 50px;">
+                    </div>
+                    <div style="line-height: 1px; padding: 10px;">
+                        <p>Emma Watson</p>
+                        <p>@Emma_Watson</p>
+                    </div>
+                    <div>
+                        <button
+                            style="border-radius: 20px; height: 35px; width: 80px; font-size: 16px; background-color: rgb(44, 173, 220); border: none;">Follow</button>
                     </div>
                 </div>
             </div>
-            <div
-                style="display: flex; justify-content: start; align-items: center; margin-top: 15px;margin-bottom: 30px;">
-                <a href="#" style="text-decoration: none; font-size: 20px; color: rgb(74, 149, 199);">Show more</a>
-            </div>
+
+            <button
+                style="display: flex; justify-content: start; align-items: center; margin-top: 10px;margin-bottom: 20px; background-color: black; border: none; color: rgb(74, 149, 199);font-size: 20px;"
+                type="button" onclick="extfollow()" id="tofollowbutton">
+                Show more
+            </button>
             <div style="border-top: 1px solid rgba(255, 255, 255, 0.491);">
                 <p><a href="#" style=" text-decoration: none;color: rgba(255, 255, 255, 0.409);">Terms of
                         Service</a>
@@ -242,7 +574,6 @@
         </div>
     </div>
 </body>
+<script src="KX.js"></script>
 
 </html>
-
-<!-- onsubmit=`${window.location.href="/"`} -->
