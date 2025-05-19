@@ -11,7 +11,7 @@ body {
 
     border-right: 1px solid;
     border-color: rgba(255, 255, 255, 0.521);
-    width: 250px;
+    width: 17vw;
     height: 100vh;
     margin-left: 0px;
 }
@@ -36,19 +36,19 @@ body {
 li {
 
     color: rgba(255, 255, 255, 0.46);
-    padding-left: 10px;
+    padding-left: 1vw;
     transition: color 0.1s;
     transition: background-color 0.1s;
-    margin-top: 5px;
+    margin-top: 0.5vw;
     margin-left: 0px;
-    margin-right: 10px;
-    border-radius: 15px;
+    margin-right: 1vw;
+    border-radius: 2vw;
     height: 45px;
-    font-size: 20px;
+    font-size: 1.3vw;
     align-items: center;
     display: flex;
     text-align: left;
-    width: 150px;
+    width: 10vw;
 }
 
 li:hover {

@@ -247,7 +247,6 @@ function loginsucc() {
     if (phone === "1234567890" && pass === "hello") {
         document.getElementById("login").style.display = "none";
         document.getElementById("Container").style.display = "flex";
-        // alert("Login Successful");
     }
     else if (phone === "") {
         alert("Enter phone number");
